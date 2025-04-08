@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisces Dreamy Nails - Nail Technician Course</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ad5389;
+            --secondary-color: #3c1053;
+            --light-color: #fef2f7;
+            --dark-color: #4b2840;
+            --accent-color: #f3b0c3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffdae9 100%);
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sparkle {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkle 4s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1.5s;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s;
+        }
+        
+        .pisces-icon {
+            font-size: 2rem;
+            margin: 0 10px;
+            vertical-align: middle;
+            animation: pulse 2s infinite;
+        }
+        
+        .social-media {
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        
+        .social-media a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        
+        .social-media a:hover {
+            transform: scale(1.2);
+        }
+        
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            animation: fadeInLeft 1.5s;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            animation: fadeInRight 1.5s;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.5s;
+        }
+        
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px  rgba(173, 83, 137, 0.4);
+            animation: pulse 2s infinite;
+        }
+        h4 {
+            padding-bottom:10px;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(173, 83, 137, 0.6);
+        }
+        
+        .course-details {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            animation: fadeIn 2s;
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        .course-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .course-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .course-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            animation: fadeInUp 1s;
+            animation-fill-mode: both;
+        }
+        
+        .course-item i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .benefits {
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 2s;
+        }
+        
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            animation: fadeInUp 1s;
+            animation-fill-mode: both;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .testimonials {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(173, 83, 137, 0.1), rgba(60, 16, 83, 0.1));
+            text-align: center;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .testimonial-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial {
+            min-width: 100%;
+            padding: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .gallery {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 2s;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            margin-top: 40px;
+            animation: fadeIn 2s;
+        }
+        
+        .cta h3 {
+            color: white;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .bonus-item {
+            color: var(--primary-color);
+            font-weight: 600;
+            color: #ffff;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Floating bubbles animation */
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            border-radius: 50%;
+            animation: rise 10s infinite ease-in;
+        }
+        
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-1000px) scale(2);
+                opacity: 0;
+            }
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                flex-direction: column;
+            }
+            
+            .course-details {
+                padding: 20px;
+            }
+            
+            .benefit-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="bubbles" id="bubbles"></div>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn">
+                Pisces Dreamy Nails <i class="fas fa-fish pisces-icon"></i>
+              </h1>
+              <h2 class="animate__animated animate__fadeIn animate__delay-1s">
+                Basic to Advanced Nail Technician Course with Certification
+              </h2>
+              <!-- <div class="social-media animate__animated animate__fadeIn animate__delay-2s">
+                <a href="https://instagram.com/pisces_dreamy_nails" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div> -->
+        </div>
+    </header>
+
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h2>Turn Your Passion Into Profession</h2>
+                <p>Join Pisces Dreamy Nails professional nail technician course and learn from expert nail artist ZEEL. Get certified and start your career in nail art.</p>
+                <br>
+                <h2>All practice materials included FREE for students!</h2>
+                <a href="#contact" class="btn">DM for Booking & Details</a>
+            </div>
+             <div class="hero-image">
+                <img width="400" height="400" src="https://png.pngtree.com/png-clipart/20211116/original/pngtree-manicure-nail-color-logo-abstract-png-image_6931421.png" alt="Nail Art Example">
+            </div> 
+        </div>
+    </section> -->
+
+    <section class="course-details">
+        <div class="container">
+            <h3>What You Will Learn</h3>
+            <div class="course-columns">
+                <div class="course-column">
+                    <h4>Basic Techniques</h4>
+                    <div class="course-item" style="animation-delay: 0.1s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Nail anatomy</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.2s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Product knowledge</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.3s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Tool introduction</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.4s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dry manicure</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.5s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Nail shapes</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.6s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Gel polish</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.7s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Temporary nail extension</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 0.8s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Acrylic nail extension</span>
+                    </div>
+                </div>
+                
+                <div class="course-column">
+                    <h4>Advanced Techniques</h4>
+                    <div class="course-item" style="animation-delay: 0.9s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Gel nail extension</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.0s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dip Powder Application</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.1s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Gel polish removal</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.2s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Extension removal</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.3s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Press-On Nail Kit</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.5s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Toe nail extension</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 3.0s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sweater art</span>
+                    </div>
+                </div>
+                
+                <div class="course-column">
+                    <h4>Nail Art Techniques</h4>
+                    <div class="course-item" style="animation-delay: 1.6s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Chrome nail art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.7s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Ombre nail art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.8s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>French nail art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 1.9s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Marble nail art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.0s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Foil art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.1s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Emboss effect</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.2s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Glitter art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.3s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cat eye nail art</span>
+                    </div>
+                </div>
+                
+                <div class="course-column">
+                    <h4>Special Art Techniques</h4>
+                    <div class="course-item" style="animation-delay: 2.4s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Animal print art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.5s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>3D nail art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.6s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Spider gel art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.7s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Stone application</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.8s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dotting tool art</span>
+                    </div>
+                    <div class="course-item" style="animation-delay: 2.9s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sugar art</span>
+                    </div>
+                    
+                    <div class="course-item" style="animation-delay: 3.1s;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>...and 10+ more unique nail art styles!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <a href="https://ig.me/m/pisces_dreamy_nails" class="btn" target="_blank">
+                DM Us for Bookings & Details
+            </a>
+        </center>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h3>Course Benefits</h3>
+            <div class="benefits-container">
+                <div class="benefit-card" style="animation-delay: 0.2s;">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Professional Certificate</h4>
+                    <p>Get certified and launch your professional nail technician career.</p>
+                </div>
+                <div class="benefit-card" style="animation-delay: 0.4s;">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Free Practice Materials Included</h4>
+                    <p>All practice materials provided free for students</p>
+                </div>
+                <div class="benefit-card" style="animation-delay: 0.6s;">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h4>Course Completion Gift</h4>
+                    <p>Enjoy a complimentary gel extension and special gift upon completion!</p>
+                </div>
+                <div class="benefit-card" style="animation-delay: 0.8s;">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>Expert Instructor</h4>
+                    <p>Learn from ZEEL, an experienced nail artist and professional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta" id="contact">
+        <div class="container">
+            <h3>Start Your Nail Art Journey Today!</h3>
+            <p>Contact us for limited-time offers and booking details!</p>
+            <div class="contact-info">
+                <div>
+                    <div class="contact-item">
+                        <a href="https://instagram.com/pisces_dreamy_nails" target="_blank" style="color: white; text-decoration: none;">
+                            <i class="fab fa-instagram"></i>
+                            <span>@pisces_dreamy_nails</span>
+                          </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Surat, Gujarat</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bonus-item">
+                <i class="fas fa-gift"></i> At the end of the course, every student will be given a free gel extension and a gift as well!
+            </p>
+            <a href="https://ig.me/m/pisces_dreamy_nails" class="btn">Message Us Now to Book Your Spot!</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Pisces Dreamy Nails - Basic to Advance Nail Technician Course</p>
+            <p>Artist: ZEEL | All Types of Nails & Art 💅🏻</p>
+        </div>
+    </footer>
+
+    <script>
+        // Create sparkles
+        function createSparkles() {
+            const header = document.querySelector('header');
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.width = Math.random() * 10 + 'px';
+                sparkle.style.height = sparkle.style.width;
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 4 + 's';
+                header.appendChild(sparkle);
+            }
+        }
+        
+        // Create bubbles
+        function createBubbles() {
+            const bubblesContainer = document.getElementById('bubbles');
+            
+            for (let i = 0; i < 15; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                const size = Math.random() * 60 + 20;
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.animationDuration = Math.random() * 8 + 8 + 's';
+                bubble.style.animationDelay = Math.random() * 5 + 's';
+                
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+        
+        // Animate course items on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.course-item, .benefit-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s, transform 0.5s';
+                observer.observe(element);
+            });
+        }
+        
+        // Testimonial slider
+        let testimonialIndex = 0;
+        const testimonials = [
+        {
+            "text": "This course completely changed my career path! I now run my own nail salon and couldn't be happier with the skills I learned. 💅✨",
+            "author": "Priya S."
+          },
+          {
+            "text": "The attention to detail in teaching each technique was amazing. I feel confident doing advanced nail art after completing this course. 🌸",
+            "author": "Meera P."
+          },
+          {
+            "text": "Zeel is such a patient and knowledgeable instructor. The free materials were a huge plus for practicing at home! 🛍️💕",
+            "author": "Tanvi R."
+          },
+          {
+            "text": "Each session felt like a fun workshop with friends! I loved how hands-on everything was, and now I can do nail art like a pro. 🎨💖",
+            "author": "Sneha M."
+          },
+          {
+            "text": "સાચી કહું તો, આ કોર્સ પછી હું nail art માટે confident feel કરું છું. Zeel madam ખુબ જ friendly અને supportive છે. 🌷😊",
+            "author": "Kinjal B."
+          },
+          {
+            "text": "અમે class માં ઘણા designs try કર્યા અને દરેક વખતએ કઈક નવું શીખવા મળ્યું. હવે મારી પાસે perfect nails માટે skills છે! 💅🌟",
+            "author": "Jinal D."
+          },
+          {
+            "text": "Every minute of the class was worth it! Zeel's creativity and kindness made learning so enjoyable. Thank you for inspiring me! 🌈✨",
+            "author": "Dhvani T."
+          },
+          {
+            "text": "મારી પાસે પહેલાં nail art નો कोई idea નહોતો. પણ હવે તો હું મારા friends અને clients માટે nails perfectly કરી શકું છું. 🥰🎉",
+            "author": "Riddhi S."
+          },
+          {
+            "text": "The vibe of the class was so positive and fun! I looked forward to every session and walked away with real skills. 🎀💖",
+            "author": "Anjali V."
+          },
+          {
+            "text": "Zeel madamએ દરેક step patiently શીખવ્યું અને repeat પણ કર્યું જયારે જરૂર પડી. બહુ જ sweet છે! 😇🌸",
+            "author": "Hetal P."
+          }        ];
+        
+        function setupTestimonials() {
+            const sliderContainer = document.createElement('div');
+            sliderContainer.className = 'testimonial-container';
+            
+            const slider = document.createElement('div');
+            slider.className = 'testimonial-slider';
+            
+            testimonials.forEach(testimonial => {
+                const testimonialDiv = document.createElement('div');
+                testimonialDiv.className = 'testimonial';
+                
+                const text = document.createElement('p');
+                text.className = 'testimonial-text';
+                text.textContent = testimonial.text;
+                
+                const author = document.createElement('p');
+                author.className = 'testimonial-author';
+                author.textContent = testimonial.author;
+                
+                testimonialDiv.appendChild(text);
+                testimonialDiv.appendChild(author);
+                slider.appendChild(testimonialDiv);
+            });
+            
+            sliderContainer.appendChild(slider);
+            
+            const section = document.createElement('section');
+            section.className = 'testimonials';
+            
+            const container = document.createElement('div');
+            container.className = 'container';
+            
+            const heading = document.createElement('h3');
+            heading.textContent = 'What Our Students Say';
+            
+            container.appendChild(heading);
+            container.appendChild(sliderContainer);
+            section.appendChild(container);
+            
+            document.querySelector('.benefits').after(section);
+            
+            setInterval(() => {
+                testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+                slider.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+            }, 5000);
+        }
+        
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            createSparkles();
+            createBubbles();
+            animateOnScroll();
+            setupTestimonials();
+            
+            // Add animation delays to benefits
+            document.querySelectorAll('.benefit-card').forEach((card, index) => {
+                card.style.animationDelay = (index * 0.2) + 's';
+            });
+        });
+    </script>
+</body>
+</html>
