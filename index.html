@@ -152,12 +152,18 @@
       }
 
       .hero-image img {
-        max-width: 100%;
+        width: 90%;
+        max-width: 400px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
         border-radius: 50%;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         transition: transform 0.5s;
+        margin: 0 auto;
+        display: block;
       }
-
+      
+      
       .hero-image img:hover {
         transform: scale(1.05);
       }
@@ -708,8 +714,6 @@
         </div>
         <div class="hero-image">
           <img
-            width="400"
-            height="400"
             src="https://i.ibb.co/NdxYJ48X/Chat-GPT-Image-Apr-11-2025-04-28-41-PM.png"
             alt="Nail Art Examples"
           />
