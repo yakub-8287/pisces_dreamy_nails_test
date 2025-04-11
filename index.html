@@ -130,7 +130,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 60px ;
+        padding: 60px;
         background-color: rgba(255, 255, 255, 0.8);
         margin: 20px 0;
         border-radius: 15px;
@@ -162,8 +162,7 @@
         margin: 0 auto;
         display: block;
       }
-      
-      
+
       .hero-image img:hover {
         transform: scale(1.05);
       }
@@ -184,10 +183,10 @@
           var(--secondary-color)
         );
         color: white;
-        padding: 14px 32px;
+        padding: 12px 20px;
         border-radius: 50px;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 400;
         margin-top: 20px;
         transition: all 0.3s;
         box-shadow: 0 5px 15px rgba(173, 83, 137, 0.4);
@@ -287,6 +286,7 @@
 
       .benefits-container {
         display: flex;
+
         flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
@@ -316,16 +316,14 @@
       }
 
       .testimonials {
-        padding: 70px 0;
+        padding: 60px 0;
+        border-radius: 15px;
         background: linear-gradient(
           135deg,
           rgba(173, 83, 137, 0.1),
           rgba(60, 16, 83, 0.1)
         );
         text-align: center;
-        border-radius: 15px;
-        margin: 40px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       }
 
       .testimonial-container {
@@ -342,22 +340,23 @@
 
       .testimonial {
         min-width: 100%;
-        padding: 30px;
-        background-color: white;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        padding: 0 5px 0 5px;
+      }
+      .testimonialColor {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 12px;
       }
 
       .testimonial-text {
         font-style: italic;
         font-size: 1.1rem;
         margin-bottom: 20px;
-        line-height: 1.8;
       }
 
       .testimonial-author {
         font-weight: 600;
         color: var(--primary-color);
-        font-size: 1.1rem;
       }
 
       .gallery {
@@ -365,7 +364,6 @@
         text-align: center;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 15px;
-        margin: 40px 0;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       }
 
@@ -430,11 +428,46 @@
         align-items: center;
         margin-bottom: 15px;
         font-size: 1.1rem;
+        flex-wrap: wrap; /* Add this to allow items to wrap on smaller screens */
       }
 
       .contact-item i {
         margin-right: 10px;
         font-size: 1.2rem;
+      }
+
+      .instagram-link {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 0; /* Remove default right margin for web */
+        margin-bottom: 0;
+      }
+
+      .instagram-text {
+        margin-left: 5px; /* Add space between icon and text */
+      }
+
+      .location {
+        margin-left: 0; /* Reset left margin */
+        margin-left: 30px;
+        align-items: center;
+      }
+
+      /* Media query for mobile devices (example: max-width: 768px) */
+      @media (max-width: 768px) {
+        .contact-item {
+          flex-direction: column; /* Stack items vertically on mobile */
+          align-items: flex-start; /* Align items to the start (left) */
+        }
+
+        .instagram-link {
+          margin-bottom: 10px; /* Add margin below Instagram link on mobile */
+          margin-right: 0;
+        }
+
+        .location {
+          margin-top: 5px; /* Adjust top margin if needed */
+        }
       }
 
       footer {
@@ -743,7 +776,6 @@
           </div>
         </div>
       </div>
-      
 
       <section class="course-details">
         <div class="container">
@@ -953,36 +985,38 @@
                   href="https://instagram.com/pisces_dreamy_nails"
                   target="_blank"
                   style="color: white; text-decoration: none"
+                  class="instagram-link"
                 >
-                <span style="display: inline-flex; align-items: center;">
-                    <i class="fab fa-instagram"></i>@pisces_dreamy_nails
+                  <span style="display: inline-flex; align-items: center">
+                    <i class="fab fa-instagram"></i>
+                    <span class="instagram-text">@pisces_dreamy_nails</span>
                   </span>
                 </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Surat, Gujarat</span>
+                <span class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Surat, Gujarat</span>
+                </span>
               </div>
             </div>
           </div>
           <p class="bonus-item">
-            <i class="fas fa-gift"></i> At the end of the course, every student
-            will be given a free gel extension and a gift as well!
+            <i class="fas fa-gift"></i>  All practice materials included FREE with your enrollment!
           </p>
           <a href="https://ig.me/m/pisces_dreamy_nails" class="btn"
-            >Message Us Now to Book Your Spot!</a
+            >Message Us to Book Your Spot!</a
           >
         </div>
       </section>
     </div>
 
-      <footer>
-        <div class="container">
-          <p>
-            © 2025 Pisces Dreamy Nails - Basic to Advance Nail Technician Course
-          </p>
-          <p>Artist: ZEEL | All Types of Nails & Art 💅🏻</p>
-        </div>
-      </footer>
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 Pisces Dreamy Nails - Basic to Advance Nail Technician Course
+        </p>
+        <p>Artist: ZEEL | All Types of Nails & Art 💅🏻</p>
+      </div>
+    </footer>
 
     <script>
       // Create sparkles
@@ -1101,6 +1135,9 @@
           const testimonialDiv = document.createElement("div");
           testimonialDiv.className = "testimonial";
 
+          const testimonialColorDiv = document.createElement("div");
+          testimonialColorDiv.className = "testimonialColor";
+
           const text = document.createElement("p");
           text.className = "testimonial-text";
           text.textContent = testimonial.text;
@@ -1109,8 +1146,9 @@
           author.className = "testimonial-author";
           author.textContent = testimonial.author;
 
-          testimonialDiv.appendChild(text);
-          testimonialDiv.appendChild(author);
+          testimonialColorDiv.appendChild(text);
+          testimonialColorDiv.appendChild(author);
+          testimonialDiv.appendChild(testimonialColorDiv);
           slider.appendChild(testimonialDiv);
         });
 
@@ -1134,7 +1172,7 @@
         setInterval(() => {
           testimonialIndex = (testimonialIndex + 1) % testimonials.length;
           slider.style.transform = `translateX(-${testimonialIndex * 100}%)`;
-        }, 3000);
+        }, 5000);
       }
 
       // Initialize
@@ -1156,41 +1194,56 @@
           console.error("Countdown element not found!");
           return;
         }
-      
+
         // Set a fixed target date (April 20, 2025 at 12:00 PM)
-        const targetDate = new Date('May 1, 2025 04:00:00').getTime();
-        
+        const targetDate = new Date("May 1, 2025 04:00:00").getTime();
+
         function updateCountdown() {
           const now = new Date().getTime();
           const difference = targetDate - now;
-          
+
           if (difference <= 0) {
             clearInterval(countdownInterval);
-            document.querySelector('.countdown-title').textContent = "New Batch Started!";
+            document.querySelector(".countdown-title").textContent =
+              "New Batch Started!";
             document.getElementById("days").textContent = "00";
             document.getElementById("hours").textContent = "00";
             document.getElementById("minutes").textContent = "00";
             document.getElementById("seconds").textContent = "00";
             return;
           }
-          
+
           const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          const hours = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (difference % (1000 * 60 * 60)) / (1000 * 60)
+          );
           const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-          
+
           // Add leading zeros if necessary
-          document.getElementById("days").textContent = String(days).padStart(2, "0");
-          document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-          document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-          document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+          document.getElementById("days").textContent = String(days).padStart(
+            2,
+            "0"
+          );
+          document.getElementById("hours").textContent = String(hours).padStart(
+            2,
+            "0"
+          );
+          document.getElementById("minutes").textContent = String(
+            minutes
+          ).padStart(2, "0");
+          document.getElementById("seconds").textContent = String(
+            seconds
+          ).padStart(2, "0");
         }
-        
+
         updateCountdown(); // Initial call
         const countdownInterval = setInterval(updateCountdown, 1000);
       }
-      
-      window.onload = function() {
+
+      window.onload = function () {
         startCountdown();
       };
     </script>
