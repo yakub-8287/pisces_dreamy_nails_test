@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yakub-8287.github.io/pisces_dreamy_nails_test/sitemap.xml
